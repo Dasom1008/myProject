@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="tab-style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        //tab operation
+        $(".tabmenu").click(function () {
+          var activeTab = $(this).attr("data-tab");
+          $("li").css("background-color", "white");
+          $(this).css("background-color", "pink");
+          $.ajax({
+            type: "GET",
+            url: activeTab + ".html",
+            dataType: "html",
+            error: function () {
+              alert("통신실패!!");
+            },
+            success: function (data) {
+              $("#tabContent").html(data);
+            },
+          });
+        });
+        $("#default").click();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="tab">
+        <li data-tab="tab1" class="tabmenu" id="default">
+          <a href="#">TabExample</a>
+        </li>
+        <li data-tab="tab2" class="tabmenu">
+          <a href="#">TabExample2</a>
+        </li>
+        <li data-tab="tab3" class="tabmenu">
+          <a href="#">TabExample3</a>
+        </li>
+      </ul>
+      <div id="tabContent"></div>
+    </div>
+  </body>
+</html>
