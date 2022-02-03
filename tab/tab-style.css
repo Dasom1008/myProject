@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'LeferiPoint-BlackA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .container{
     width: 960px;
     margin: 0 auto;
@@ -16,22 +23,24 @@
     background-color: pink;
     padding : 6px 12px;
     color: #fff;
+    font-family: 'LeferiPoint-BlackA';
 }
 
 a{
-    display: inline-block;
+    display: inline-block;     /*   주석을 단다.  */
     color: #000;
     text-align: center;
     text-decoration: none;
     padding: 14px 16px;
     font-size: 17px;
     transition: 0.3s;
+    font-family: 'LeferiPoint-BlackA';
 }
 
-a:visited{
+/* a:visited{
     color: black;
     text-decoration: none;
-}
+} */
 
 li{
     float: left;
