@@ -16,3 +16,7 @@ input{
 input:focus{
     outline: none;
 }
+
+td:hover{
+    cursor: pointer;
+}

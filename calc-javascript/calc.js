@@ -1,10 +1,10 @@
-var result = document.getElementById("result");
-var display = document.getElementById("display");
-var sum = 0;
+var result = document.getElementById("result");         // 계산과정을 보여주기 위한 값 을 저장하기 위한 변수
+var display = document.getElementById("display");       // 계산된 값을 보여주기 위한 변수
+var sum = 0;                                            // 계산된 값을 저장할 변수 (number형으로 선언)
 
-let operator = "";
-let num1 = "";
-let num2 = "";
+let operator = "";  // 연산자를 저장할 변수
+let num1 = "";      // 첫번째 숫자를 저장할 변수
+let num2 = "";      // 두번째 숫자를 저장할 변수
 
 const $operatoer = document.querySelectorAll('.add');
 
@@ -28,10 +28,10 @@ document.querySelectorAll("#btn-add").forEach(item => {
              break
         }
 
-        operator = item.innerHTML;
-        console.log("operator : " + operator)
-        result.value += operator;
-        if(operator == "="){
+        operator = item.innerHTML;  // 입력된 연산자를 operator 변수에 저장 
+        result.value += operator;   // display에 연산자 추가 
+
+        if(operator == "="){        //연산자가 "="이면 계산된 값을 display에 나타냄 
             result.value += sum;
             display.value = sum;
         }
@@ -39,7 +39,7 @@ document.querySelectorAll("#btn-add").forEach(item => {
     })
 })
 
-document.querySelectorAll("#btn-num").forEach(item => {
+document.querySelectorAll("#btn-num").forEach(item => {     //Id값이 btn-num인 td를 클릭할때 
     item.addEventListener("click",(e) =>{
         if(operator == ""){ // 연산자가 입력되기 전이면 num1에 값 넣기 
             num1 += item.innerHTML;
