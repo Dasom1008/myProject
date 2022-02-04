@@ -1,0 +1,18 @@
+table{
+    border-collapse: collapse;
+    font-weight: bolder;
+}
+
+td{
+    padding: 5px 10px;
+    text-align: center;
+}
+
+input{
+    border: none;
+    text-align: right;
+}
+
+input:focus{
+    outline: none;
+}

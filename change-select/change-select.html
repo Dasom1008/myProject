@@ -1,26 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
+    <style>
+      /* select-box */
+      .select-box {
+        width: 350px;
+        padding: 0.8em 0.5em;
+        border: 1px solid #999;
+        font-family: inherit;
+        background: url("/img/arrow.jpg") no-repeat 95% 50%;
+        border-radius: 0px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
 
+      select::-ms-expand {
+        display: none;
+      }
+
+      /* index css */
+      .index-table {
+        border-collapse: collapse;
+      }
+
+      .index-table th {
+        padding: 10px;
+        color: #168;
+        border-bottom: 3px solid #168;
+        text-align: left;
+      }
+      .index-table td {
+        color: #669;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+      .index-table tr:hover td {
+        background-color: #b7d9eb;
+        color: #168;
+      }
+
+      a {
+        text-decoration: none;
+        color: #168;
+      }
+    </style>
+  </head>
+  <body>
     <select class="select-box" onchange="categoryChange(this)">
-        <option>걸그룹을 선택해주세요</option>
-        <option value="a">블랙핑크</option>
-        <option value="b">에프엑스</option>
-        <option value="c">EXID</option>
+      <option>걸그룹을 선택해주세요</option>
+      <option value="a">블랙핑크</option>
+      <option value="b">에프엑스</option>
+      <option value="c">EXID</option>
     </select>
-    <br>
-    
+    <br />
+
     <select class="select-box" id="good">
-    <option>좋아하는 멤버를 선택해주세요</option>
+      <option>좋아하는 멤버를 선택해주세요</option>
     </select>
 
-    <script src="/main.js"></script>
-</body>
+    <script>
+      function categoryChange(e) {
+        var good_a = ["지수", "제니", "로제", "리사"];
+        var good_b = ["빅토리아", "엠버", "루나", "크리스탈"];
+        var good_c = ["LE", "하니", "정화", "혜린", "솔지"];
+        var target = document.getElementById("good");
+
+        if (e.value == "a") var d = good_a;
+        else if (e.value == "b") var d = good_b;
+        else if (e.value == "c") var d = good_c;
+
+        target.options.length = 0;
+
+        for (x in d) {
+          var opt = document.createElement("option");
+          opt.value = d[x];
+          opt.innerHTML = d[x];
+          target.appendChild(opt);
+        }
+      }
+    </script>
+  </body>
 </html>
