@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,9 +13,11 @@
       $(function () {
         //tab operation
         $(".tabmenu").click(function () {
-          var activeTab = $(this).attr("data-tab");
+          var activeTab = $(this).attr("data-tab");     //this의 data-tab속성을 가져오기 
+
           $("li").css("background-color", "white");
           $(this).css("background-color", "pink");
+          
           $.ajax({
             type: "GET",
             url: activeTab + ".html",

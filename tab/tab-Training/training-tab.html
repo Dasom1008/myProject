@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/tab/tab-Training/train.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+            $(".tabmenu").click(function(){
+                var activeTab = $(this).attr("data-tab");
+
+                $("li").css("background-color", "white");
+                $(this).css("background-color","skyblue");
+
+                $.ajax({
+                    type : "GET",
+                    url : activeTab + ".html",
+                    dataType : "html",
+
+                })
+
+
+            })
+        })
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <ul class="tab">
+            <li data-tab="menu1" class="tabmenu" id="default">
+                <a href="#">TabExample</a>
+            </li>
+            <li data-tab="menu2" class="tabmenu">
+                <a href="#">TabExample2</a>
+            </li>
+            <li data-tab="menu3" class="tabmenu" i>
+                <a href="#">TabExample3</a>
+            </li>
+        </ul>
+    </div>
+    <div id="menuContent"></div>
+</body>
+</html>
