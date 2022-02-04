@@ -10,7 +10,7 @@
 
     <script>
         $(function(){
-            $(".tabmenu").click(function(){
+            $(".sub-menu").click(function(){
                 var activeTab = $(this).attr("data-tab");
 
                 $("li").css("background-color", "white");
@@ -20,29 +20,34 @@
                     type : "GET",
                     url : activeTab + ".html",
                     dataType : "html",
-
-                })
-
-
-            })
-        })
+                    error:function(){
+                        alert("통신실패!!");
+                    },
+                    success:function(data){
+                        $("#menuContent").html(data);
+                    },
+                });
+            });
+            $("#default").click();
+        });
     </script>
 </head>
 <body>
 
-    <div class="container">
-        <ul class="tab">
-            <li data-tab="menu1" class="tabmenu" id="default">
+    <div class="menu-container" style="width: 760px;">
+        <ul class="menu">
+            <li data-tab="menu1" class="sub-menu" id="default">
                 <a href="#">TabExample</a>
             </li>
-            <li data-tab="menu2" class="tabmenu">
+            <li data-tab="menu2" class="sub-menu">
                 <a href="#">TabExample2</a>
             </li>
-            <li data-tab="menu3" class="tabmenu" i>
+            <li data-tab="menu3" class="sub-menu">
                 <a href="#">TabExample3</a>
             </li>
         </ul>
+        <div id="menuContent"></div>
     </div>
-    <div id="menuContent"></div>
+    
 </body>
 </html>
