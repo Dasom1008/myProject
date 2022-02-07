@@ -15,6 +15,10 @@
 
                 $("li").css("background-color", "white");
                 $(this).css("background-color","skyblue");
+                $(this).css("border-top-left-radius", "5px");
+                $(this).css("border-top-right-radius","5px");
+                //$(this).css("transition","0.8s");
+                
 
                 $.ajax({
                     type : "GET",
@@ -25,6 +29,7 @@
                     },
                     success:function(data){
                         $("#menuContent").html(data);
+                        $("#menuContent").css("transition","0.8s");
                     },
                 });
             });
