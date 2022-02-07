@@ -41,35 +41,24 @@ document.querySelectorAll("#btn-add").forEach(item => {
 
 document.querySelectorAll("#btn-num").forEach(item => {     //Id값이 btn-num인 td를 클릭할때 
     item.addEventListener("click",(e) =>{
-        if(operator == ""){ // 연산자가 입력되기 전이면 num1에 값 넣기 
+        if(operator == ""){                                 // 연산자가 입력되기 전이면 num1에 값 넣기 
             num1 += item.innerHTML;
             console.log("num1 : " + num1);
-        }else{ //연산자가 입력된 후이면 num2에 값 넣기 
+        }else{                                              //연산자가 입력된 이후이면 num2에 값 넣기 
             num2 += item.innerHTML;
             console.log("num2 : " + num2);
         }
-        result.value += item.innerHTML;
+        result.value += item.innerHTML;                     //계산과정을 보여주는 result에 입력된 숫자,연산자를 저장
     })
 })
 
-document.querySelector('#btn_reset').addEventListener("click",(e)=>{
-    
+document.querySelector('#btn_reset').addEventListener("click",(e)=>{        //AC버튼 클릭시 리셋. 
     operator = "";
     num1 = "";
     num2 = "";
     display.value = "0";
     result.value = "";
-    console.log("reset Click")
+    console.log("reset Click");
+    
 })
 
-if(result == ""){
-    
-}
-
-//1. 첫번쨰 입력 숫자 가져오기 
-
-
-//2. 연산자 가져오기
-//3. 두번째 입력 숫자 가져오기 
-//4. display에 연산 과정 보여주기 
-//5. 계산된 값 출력하기 
