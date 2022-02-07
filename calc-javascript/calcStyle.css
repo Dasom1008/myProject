@@ -1,22 +1,57 @@
-table{
-    border-collapse: collapse;
-    font-weight: bolder;
+body{
+    font-family: 'Fira code';
+    color: white;
 }
 
-td{
-    padding: 5px 10px;
-    text-align: center;
+table {
+  border-collapse: collapse;
+  font-weight: bolder;
+  margin: 0 auto;
+  border: 2px solid black;
 }
 
-input{
-    border: none;
-    text-align: right;
+td {
+  padding: 5px 10px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
 }
 
-input:focus{
-    outline: none;
+input {
+  border: none;
+  text-align: right;
+  background-color: #4d4d4d;
+  color: white;
+  font-family: 'Fira code';
 }
 
-td:hover{
-    cursor: pointer;
+input:focus {
+  outline: none;
+  background-color: #4d4d4d;
+}
+
+.result,
+.display {
+  background-color: #4d4d4d;
+}
+
+.reset{
+    background-color: #6e6e6e;
+}
+
+.item {
+  background-color: #949494
+}
+
+.add {
+  background-color: #ff8b24;
+}
+
+.item:hover,
+.reset:hover{
+    background-color: #a8a8a8;
+}
+
+.add:hover{
+    background-color: #f7bf8d;
 }
