@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(40, 40, 51);
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    margin: 1em;
+    font-size: medium;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-area {
+  float: left;
+  /* border: 1px solid white; */
+  width: 200px;
+  height: 100vh;
+}
+
+.content-area {
+  float: left;
+  border: 1px solid white;
+  background-color: white;
+  width: 90%;
+  border-radius: 20px;
+  height: 100vh;
+}
