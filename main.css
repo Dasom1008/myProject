@@ -1,41 +1,58 @@
 body{
-    /* background-color: rgb(40, 40, 51); */
+    background-color: darkslategray;
 }
 
-div{
-    border: 1px solid gray;
+.wrap{
+    margin: 0 auto;
 }
-
 .nav-area{
     height: 100vh;
     width : 250px;
-    background-color: darkslategray;
     color: white;
+    float: left;
+    background-color: darkslategray;
 
 }
+
+#content{
+    border-radius: 20px;
+    background-color: white;
+    height: 100vh;
+    width: 80%;
+    float: left;
+}
+
 
 .profile{
     height: 250px;
 }
 
 .menu-container{
-    width: 100%;
-    margin-top: 20px;;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
 }
 
 a{
+    text-align: center;
     display: block;
     text-decoration: none;
     color: white;
     padding: 1em;
     font-size: 13pt;
-    text-indent: 40px;
     width: 100%;
-    border-bottom: 1px solid rgb(143, 163, 155);
-    
+    box-sizing: border-box;
+    /* border-bottom: 1px solid rgb(127, 136, 132); */
+    font-weight: 600;  
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
-nav{
-    display: flex;
-    flex-direction: column;
+a:hover{
+    background-color: rgb(142, 158, 158);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;/* opacity: 0.8; */
 }
+
