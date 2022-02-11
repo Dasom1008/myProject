@@ -1,31 +1,59 @@
 body{
-  background-color: rgb(40, 40, 51);
+  background-color: darkslategray;
 }
 
-.title{
-  color: #ffca4f;
-  text-align: center;
+.wrap{
+  margin: 0 auto;
+}
+.nav-area{
+  height: 100vh;
+  width : 250px;
+  color: white;
+  float: left;
+  background-color: darkslategray;
+
+}
+
+#content{
+  border-radius: 20px;;
+  background-color: white;
+  height: 100%;
+  width: 80%;
+  float: left;
+  top: 0;
+}
+
+
+.profile{
+  height: 250px;
+}
+
+.menu-container{
   display: flex;
-  justify-content: right;
-  align-items: center;
-  min-height: 100vh;
-  margin-right: 100px;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
 }
 
-.title-h1{
-  font-size: 30pt;
-  font-weight: bold;
-  font-family: 'Fira code';
-  display: inline-block;
-  border-bottom: 2px solid #ffca4f;
-  letter-spacing: 10px;
+a{
   text-align: center;
-  text-indent: 10px;
+  display: block;
   text-decoration: none;
-  color: #ffca4f;
+  color: white;
+  padding: 1em;
+  font-size: 13pt;
+  width: 100%;
+  box-sizing: border-box;
+  /* border-bottom: 1px solid rgb(127, 136, 132); */
+  font-weight: 600;  
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-#img{
-  height: 200px;
-  /* border: 1px solid #ffca4f; */
+a:hover{
+  background-color: rgb(142, 158, 158);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;/* opacity: 0.8; */
 }
+

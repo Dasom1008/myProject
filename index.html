@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html lang="kr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <div class="title">
-        <p class="title-h1" href="#"> LEEDS </p>
-    </div>
+        <script>
+            $(function () {
+                $(".menu").click(function () {
+                    var activeTab = $(this).attr("data-tab");
 
-    <!-- 
-      <table class="index-table">
-      <tr>
-        <th>주제</th>
-        <th>이동</th>
-      </tr>
-      <tr>
-        <td> 환율계산기 만들기 </td>
-        <td><a href="/exchange-currency/change-currency.html">이동</a></td>
-      </tr>
-      <tr>
-        <td> select-box 값 변화주기</td>
-        <td><a href="/change-select/change-select.html"> 이동 </a></td>
-      </tr>
-    </table>
-    <br /> 
-  -->
+                    $("a").css("background-color", "darkslategray");
+                    $("a").css("color", "white");
 
+                    $(this).css("background-color", "white");
+                    $(this).css("color", "darkslategray");
 
+                    $.ajax({
+                        type: "GET",
+                        url: activeTab + ".html",
+                        dataType: "html",
+                        error: function () {
+                            alert("통신실패!!");
+                        },
+                        success: function (data) {
+                            $("#content").html(data);
+                        },
+                    });
+                });
 
-    <script src="main.js"></script>
-  </body>
+                $("#default").click();
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="nav-area">
+                <div class="profile"></div>
+                <div class="menu-container">
+                    <a class="menu" data-tab="Home" href="#" id="default">Home</a>
+                    <a class="menu" data-tab="About" href="#">About</a>
+                    <a class="menu" data-tab="Portfolio" href="#">Portfolio</a>
+                    <a class="menu" data-tab="Etc" href="#">Etc</a>
+                </div>
+            </div>
+            <div id="content"></div>
+        </div>
+    </body>
 </html>
