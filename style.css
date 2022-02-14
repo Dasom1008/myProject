@@ -33,10 +33,11 @@ body{
   flex-direction: column;
   margin: 0;
   padding: 0;
+  text-align: left;
 
 }
 
-a{
+.menu{
   text-align: center;
   display: block;
   text-decoration: none;
@@ -51,7 +52,7 @@ a{
   border-bottom-left-radius: 10px;
 }
 
-a:hover{
+.menu:hover{
   background-color: rgb(142, 158, 158);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;/* opacity: 0.8; */
