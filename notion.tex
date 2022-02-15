@@ -1,0 +1,67 @@
+
+if(prop("Completed") / prop("Goal") >= 1, 
+"✅", slice("■■■■■■■■■■", 0, floor(prop("Completed") 
+/ prop("Goal") * 10)) + slice("□□□□□□□□□□", 0, ceil(10 - prop("Completed") / prop("Goal") * 10)) 
++ " " + format(floor(prop("Completed") / prop("Goal") * 100)) + "%")
+==================================================================================================
+
+if(floor(divide(prop("❗달성")) == 0, "⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜", 
+if(floor(divide(prop("❗달성")) == 1, "🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜", 
+if(floor(divide(prop("❗달성")) * 10) == 2, "🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜", 
+if(floor(divide(prop("❗달성")) * 10) == 3, "🟩🟩🟩⬜⬜⬜⬜⬜⬜⬜", 
+if(floor(divide(prop("❗달성")) * 10) == 4, "🟩🟩🟩🟩⬜⬜⬜⬜⬜⬜", 
+if(floor(divide(prop("❗달성")) * 10) == 5, "🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜", 
+if(floor(divide(prop("❗달성")) * 10) == 6, "🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜", 
+if(floor(divide(prop("❗달성")) * 10) == 7, "🟩🟩🟩🟩🟩🟩🟩⬜⬜⬜", 
+if(floor(divide(prop("❗달성")) * 10) == 8, "🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜", 
+if(floor(divide(prop("❗달성")) * 10) == 9, "🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜",
+"🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩"))))))))))
+
+
+
+
+
+
+
+
+==================================================================================================
+
+if(toNumber(prop("❗달성")) == 100, "■■■■■■■■■■" + " " + format(prop("❗달성")), 
+if(toNumber(prop("❗달성")) >= 90, "■■■■■■■■■□" + " " + format(prop("❗달성")), 
+if(toNumber(prop("❗달성")) >= 80, "■■■■■■■■□□" + " " + format(prop("❗달성")), 
+if(toNumber(prop("❗달성")) >= 70, "■■■■■■■□□□" + " " + format(prop("❗달성")), 
+if(toNumber(prop("❗달성")) >= 60, "■■■■■■□□□□" + " " + format(prop("❗달성")), 
+if(toNumber(prop("❗달성")) >= 50, "■■■■■□□□□□" + " " + format(prop("❗달성")), 
+if(toNumber(prop("❗달성")) >= 40, "■■■■□□□□□□" + " " + format(prop("❗달성")), 
+if(toNumber(prop("❗달성")) >= 30, "■■■□□□□□□□" + " " + format(prop("❗달성")), 
+if(toNumber(prop("❗달성")) >= 20, "■■□□□□□□□□" + " " + format(prop("❗달성")), 
+if(toNumber(prop("❗달성")) >= 10, "■□□□□□□□□□" + " " + format(prop("❗달성")), "0%"))))))))))
+
+==================================================================================================
+
+
+if(prop("❗달성") / 10) >= 1, 
+"✅", slice("■■■■■■■■■■", 0, floor(prop("❗달성") 
+/ 10 * 10)) + slice("□□□□□□□□□□", 0, ceil(10 - prop("❗달성") / 10 * 10)) 
++ " " + format(floor(prop("❗달성") / 10 * 100)) + "%")
+
+
+
+
+if(prop("❗달성") < 0.1, "□□□□□□□□□",
+if(prop("❗달성") < 0.2, "■□□□□□□□□□",
+if(prop("❗달성") < 0.3, "■■□□□□□□□□",
+if(prop("❗달성") < 0.4, "■■■□□□□□□□",
+if(prop("❗달성") < 0.5, "■■■■□□□□□□",
+if(prop("❗달성") < 0.6, "■■■■■□□□□□",
+if(prop("❗달성") < 0.7, "■■■■■■□□□□",
+if(prop("❗달성") < 0.8, "■■■■■■■□□□",
+if(prop("❗달성") < 0.9, "■■■■■■■■□□",
+if(prop("❗달성") < 1, "■■■■■■■■■□",
+"■■■■■■■■■■"))))))))))
+
+출처: https://ordinary-code.tistory.com/74 [김평범's OrdinaryCode]
+
+출처: https://ordinary-code.tistory.com/74 [김평범's OrdinaryCode]
+
+출처: https://ordinary-code.tistory.com/74 [김평범's OrdinaryCode]
