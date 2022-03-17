@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-image: linear-gradient(20deg, #08aeea 0%, #2af598 100%);
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif, Verdana, Tahoma;
+}
+
+ul{
+    list-style: none;
+}
+
+h1{
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold ;
+    text-align: center;
+    padding: 40px;
+}
+
+.accordion{
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.accordion .menu{
+    position: relative;
+    padding: 15px 15px 15px 45px;
+    color: #4d4d4d;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.accordion li:last-child .menu{
+    border-bottom: 0;
+
+}
+
+.accordion li i{
+    position: absolute;
+    top: 1.2rem;
+    left: 1rem;
+    color: #595959;
+    transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down{
+    right: 1rem;
+    left: auto;
+}
+
+.accordion li.show i.fa-chevron-down{
+    transform: rotate(180deg);
+}
+
+.accordion li.show .menu{
+    color: #b63d4d;
+}
+
+.accordion li.show i{
+    color: #b63d4d;
+}
+
+ /* Show submenu */
+.accordion li.show .submenu{
+    max-height: 500px;
+}
+
+.submenu{
+    /* height: auto;를 지정하면 transition이 동작하지 않는다 */
+    max-height: 0;
+    overflow: hidden;
+    background: #444359;
+    font-size: 14px;
+    transition: max-height 0.4s ease;
+}
+
+.submenu li{
+    border-bottom: 1px solid #4b4a5e;
+}
+
+.accordion li:last-child .submenu{
+    border-radius: 0 0 4px 4px;
+}
+
+.accordion li:last-child .submenu li:last-child{
+    border-bottom: 0;
+}
+
+.submenu a{
+    display: block;
+    text-decoration: none;
+    color: #d9d9d9;
+    padding: 12px;
+    padding-left: 42px;
+    transition: all 0.25s ease-in-out;
+}
+
+.submenu a:hover{
+    background: #b63d4d;
+    color: #fff;
+}

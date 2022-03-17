@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background: #000;
+            color: #fff;
+        }
+
+        .wrap-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="wrap-box">
+        <h2 id="clock"></h2>
+    </div>
+    
+    <script>
+        const clock = document.querySelector("h2#clock");
+
+        function getClock(){
+            const date = new Date();
+            const hours = String(date.getHours()).padStart(2,"0");
+            const minutes = String(date.getMinutes()).padStart(2,"0");
+            const seconds = String(date.getSeconds()).padStart(2,"0");
+            clock.innerText = `${hours}:${minutes}:${seconds}`;
+        }
+        getClock();
+        setInterval(getClock,1000);
+    </script>
+</body>
+</html>
